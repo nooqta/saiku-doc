@@ -45,11 +45,11 @@
     },
     {
       "group": "Getting Started",
-      "pages": ["getting-started/introduction", "getting-started/terminal", "getting-started/terminal-usage", "getting-started/installation", "getting-started/configuration", "getting-started/quickstart-guide", "getting-started/environment-variables"]
+      "pages": ["getting-started/introduction", "getting-started/terminal", "getting-started/installation", "getting-started/configuration", "getting-started/quickstart-guide", "getting-started/environment-variables"]
     },
     {
       "group": "User Guide",
-      "pages": ["user-guide/usage-instructions", "user-guide/use-cases"]
+      "pages": ["user-guide/usage-instructions", "user-guide/terminal-usage", "user-guide/use-cases"]
     },
     {
       "group": "API Reference",
