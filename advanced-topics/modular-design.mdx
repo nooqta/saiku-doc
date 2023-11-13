@@ -1,4 +1,67 @@
 ---
 title: 'Modular Design'
-description: ''
+description: 'Explore how Saiku leverages modular design principles to enhance flexibility, scalability, and maintainability.'
 ---
+# Understanding Modular Design in Saiku
+
+Saiku's architecture is built on the principles of modular design, which plays a crucial role in its functionality and extensibility. This approach allows individual components or modules to operate independently while still contributing to the overall functionality of the system.
+
+## What is Modular Design?
+
+Modular design refers to the practice of structuring a system as a collection of distinct and interchangeable modules. Each module is designed to perform a specific function and can be developed, tested, and deployed independently.
+
+### Key Benefits:
+
+- **Flexibility**: Easier to adapt or replace modules without affecting the entire system.
+- **Scalability**: Simplifies the addition of new features or enhancements.
+- **Maintainability**: Independent modules are easier to understand, debug, and update.
+
+## Saiku's Modular Components
+
+Saiku comprises several key modular components:
+
+### 1. Agent
+
+- **Function**: The Agent acts as the central coordinator, managing interactions and workflows.
+- **Modularity**: Incorporates different modules for tasks like decision-making, memory management, and interaction handling.
+
+### 2. Language Learning Models (LLMs)
+
+- **Purpose**: Provides natural language processing capabilities.
+- **Flexibility**: Different LLMs (e.g., OpenAI, Google VertexAI) are implemented as interchangeable modules.
+
+### 3. Actions
+
+- **Role**: Perform specific tasks like file operations or data processing.
+- **Independent Development**: Each action is a self-contained module, allowing for isolated development and integration.
+
+## Working with Modular Design in Saiku
+
+When developing or extending Saiku:
+
+- **Creating New Modules**: Develop new actions or functionalities as separate modules, following the established patterns.
+- **Inter-module Communication**: Understand how modules interact with each other, typically through the Agent.
+- **Testing and Deployment**: Test modules independently before integrating them into the larger system.
+
+## Example: Adding a New Action
+
+```javascript
+// Example of creating a new action module in Saiku
+import { Action } from 'saiku/interfaces/action';
+import Agent from 'saiku/agents/agent';
+
+class NewAction implements Action {
+  // Define action properties and methods
+  ...
+}
+
+// Integration with Saiku
+const agent = new Agent();
+agent.addAction('newAction', new NewAction(agent));
+```
+<Note>
+  Embracing modular design enhances the robustness and adaptability of Saiku. Whether you're contributing new features or customizing existing ones, consider the modular nature of the system.
+</Note>
+Modular design is a cornerstone of Saiku's architecture, providing the foundation for its dynamic and adaptable nature. By understanding and utilizing this approach, developers can effectively contribute to and extend Saiku's capabilities.
+
+<Footer />

@@ -1,4 +1,56 @@
 ---
 title: 'Codebase Architecture'
-description: ''
+description: 'An overview of the architectural design of the Saiku project, detailing the interaction between its core components.'
 ---
+# Codebase Architecture of Saiku
+
+The Saiku project is built with a modular and extensible architecture, facilitating the integration of AI functionalities and automation tasks. This overview provides insights into the key components of Saiku's codebase and how they interact.
+
+## Core Components
+
+Saiku's architecture revolves around three primary components:
+
+### 1. Agent (`agent.ts`)
+
+- **Function**: Acts as the central coordinator within Saiku, managing interactions and workflows.
+- **Capabilities**:
+  - Integrates various Large Language Models (LLMs) like OpenAI, Google VertexAI, etc.
+  - Handles user inputs, processes decisions, and manages responses.
+  - Maintains a memory structure and state for ongoing interactions.
+  - Executes and coordinates various actions as per user requests.
+
+### 2. Large Language Models (`openai.ts`, etc.)
+
+- **Purpose**: Provides natural language processing capabilities, essential for understanding and generating human-like text.
+- **Integration**: Different LLMs like OpenAI, Google VertexAI, and others are integrated, offering versatility in processing language-based tasks.
+- **Interactivity**: Facilitates interaction with users by predicting responses based on inputs and maintaining a conversational context.
+
+### 3. Actions (`fileAction.ts`)
+
+- **Role**: Perform specific tasks, such as file operations (read/write), as part of the Saiku's automation capabilities.
+- **Design**:
+  - Each action, like `FileAction`, is an independent module implementing the `Action` interface.
+  - Actions are reusable and can be invoked by the Agent based on user requests or as part of decision-making processes.
+
+## Interaction Flow
+
+1. **User Requests**: Users interact with Saiku, typically through textual input.
+2. **Agent Processing**: The Agent receives the input, interprets it, and decides on the appropriate course of action.
+3. **LLM Consultation**: For complex language tasks, the Agent consults an LLM (e.g., OpenAI GPT model) to generate suitable responses or action directives.
+4. **Action Execution**: Based on the decision, specific actions (e.g., `FileAction`) are executed, performing the desired task.
+5. **Response Generation**: The Agent compiles the outcomes from the LLM and actions into a cohesive response to the user.
+
+## Scalability and Modularity
+
+- **Modular Actions**: Actions can be easily added or modified, allowing for scalability and adaptability to new requirements.
+- **LLM Flexibility**: Multiple LLMs can be integrated and used interchangeably, enhancing the robustness and versatility of Saiku.
+
+<Tip>
+  Developers are encouraged to explore, contribute, and extend Saiku's functionalities. Whether it's adding new actions, integrating different LLMs, or enhancing the Agent's capabilities, there are numerous opportunities for growth and innovation.
+</Tip>
+
+---
+
+Saiku's architecture is designed for flexibility, scalability, and efficiency, making it well-suited for a wide range of AI-driven automation tasks.
+
+<Footer />

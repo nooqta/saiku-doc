@@ -1,4 +1,73 @@
 ---
 title: 'Development Setup'
-description: ''
+description: 'Set up your development environment to start building with Saiku efficiently.'
 ---
+
+# Development Setup for Saiku
+
+Setting up your development environment correctly is crucial for a smooth experience when working with Saiku. This guide will take you through the process of preparing your development setup, ensuring you have all the necessary tools and configurations in place.
+
+## Prerequisites
+
+Before you begin, make sure you have the following installed:
+- Node.js: Saiku is built on Node.js, so you'll need the latest stable version.
+- npm (Node Package Manager): Comes with Node.js and is used for managing JavaScript packages.
+- An IDE or text editor of your choice (such as VSCode, Sublime Text, or Atom).
+
+## Installing Saiku for Development
+
+To install Saiku in your local development environment, follow these steps:
+
+### 1. Clone the Saiku Repository
+
+Clone the repository from GitHub to your local machine:
+
+```bash
+git clone https://github.com/your-username/saiku.git
+cd saiku
+```
+
+### 2. Install Dependencies
+
+Navigate to the project directory and install the necessary dependencies:
+
+```bash
+npm install
+```
+
+### 3. Environment Configuration
+
+Set up the required environment variables by creating a `.env` file in the project root:
+
+```bash
+cp .env.example .env
+# Edit the .env file with your specific configurations
+```
+
+## Running Saiku Locally
+
+To run Saiku locally for development and testing purposes, use the following command:
+
+```bash
+npm start
+```
+
+This will start the Saiku agent, and you can begin testing its functionalities.
+
+## Development Best Practices
+
+When developing with Saiku, consider the following best practices:
+- Keep your dependencies up to date.
+- Regularly commit your changes to version control.
+- Write unit tests for any new code.
+- Follow coding standards and style guides for consistency.
+
+<Note>
+  Make sure to use version control (such as git) to manage your changes and collaborate with other developers effectively.
+</Note>
+
+---
+
+With your development environment set up, you're ready to start building and innovating with Saiku. For advanced configurations and customizations, check out our [Advanced Topics](/advanced-topics) section.
+
+<Footer />

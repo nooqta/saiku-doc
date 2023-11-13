@@ -1,4 +1,63 @@
 ---
 title: 'Google Services'
-description: ''
+description: 'Learn how to integrate and utilize various Google Services within Saiku for enhanced functionality and automation.'
 ---
+# Integrating Google Services with Saiku
+
+Leverage the power of Google Services within Saiku to enhance its capabilities in image processing, cloud storage, and more. This guide outlines the steps to integrate various Google Services with Saiku.
+
+## Setting Up Google Services
+
+Follow these steps to integrate Google Services into your Saiku project:
+
+<Steps>
+  <Step title="Create a Google Cloud Account">
+    If you don't already have one, create a Google Cloud account and set up a new project in the Google Cloud Console.
+  </Step>
+  <Step title="Set Up a Service Account">
+    Create a service account in your Google Cloud project:
+    - Navigate to 'IAM & Admin' > 'Service Accounts' in the Google Cloud Console.
+    - Click 'Create Service Account' and follow the instructions.
+    - Generate and download a JSON key for your service account.
+  </Step>
+  <Step title="Install Google Cloud SDK">
+    Install the Google Cloud SDK on your machine:
+    - Download the SDK from the [Google Cloud SDK page](https://cloud.google.com/sdk/docs/install).
+    - Follow the installation instructions specific to your operating system.
+  </Step>
+  <Step title="Authenticate with gcloud">
+    Authenticate your machine with Google Cloud:
+    - Run `gcloud auth login` in your terminal.
+    - Follow the prompts to authenticate using your Google account.
+  </Step>
+  <Step title="Configure gcloud">
+    Set your project ID with gcloud:
+    - Run `gcloud config set project <your-project-id>`.
+    - Replace `<your-project-id>` with the ID of your Google Cloud project.
+  </Step>
+  <Step title="Enable Google APIs">
+    Enable the specific Google APIs you need:
+    - Navigate to 'APIs & Services' > 'Dashboard' in the Google Cloud Console.
+    - Click '+ ENABLE APIS AND SERVICES' and search for the APIs you need (e.g., Vision API, Sheets API).
+    - Enable each required API for your project.
+  </Step>
+  <Step title="Configure Saiku Environment">
+    Add the necessary environment variables to your Saiku project:
+    - Include the path to your service account JSON in your `.env` file (e.g., `GOOGLE_APPLICATION_CREDENTIALS=/path/to/service-account-file.json`).
+    - Add any other required API keys or project IDs as environment variables.
+  </Step>
+</Steps>
+
+## Using Google Services in Saiku
+
+After completing these steps, your Saiku project can interact with Google Services. Whether it's processing images with Google Vision or managing data in Google Sheets, you can now leverage these services within Saiku's framework.
+
+<Warning>
+  Be cautious with your service account credentials and API keys. Store them securely and never expose them in public repositories.
+</Warning>
+
+---
+
+Integrating Google Services expands Saiku's functionalities, enabling more advanced automation and data processing capabilities in your projects.
+
+<Footer />

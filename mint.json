@@ -73,7 +73,7 @@
     },
     {
       "group": "Community and Support",
-      "pages": ["community-and-support/contributing", "community-and-support/forums-and-channels", "community-and-support/feedback-and-issues"]
+      "pages": ["community-and-support/contributing", "community-and-support/feedback-and-issues"]
     },
     {
       "group": "API Rate Limits and Costs",

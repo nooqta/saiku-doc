@@ -1,4 +1,71 @@
 ---
 title: 'Customization'
-description: ''
+description: "Learn how to tailor Saiku's functionalities and components to fit the specific requirements of your projects."
 ---
+# Customizing Saiku for Your Needs
+
+Saiku's flexible architecture allows for extensive customization, enabling you to tailor its functionalities to meet the unique demands of your projects. This guide will walk you through the process of customizing the core components of Saiku, including the Agent, LLMs, and Actions.
+
+## Customizing the Agent
+
+The Agent, as the central coordinator in Saiku, offers various customization options:
+
+- **System Messages**: Modify the default system messages to better suit the context of your application.
+- **Memory Management**: Adjust the Agent's memory structure to fit the specific needs of your tasks.
+- **Interaction Flow**: Customize how the Agent processes inputs and outputs based on your project's requirements.
+
+### Example: Configuring the Agent
+
+```javascript
+import Agent from 'saiku/agents/agent';
+
+const agentOptions = {
+  systemMessage: 'Customized greeting message',
+  // Other customizable options
+};
+
+const agent = new Agent(agentOptions);
+// Use the customized agent in your application
+```
+
+#### Integrating Different LLMs
+Saiku supports the integration of various LLMs, such as OpenAI and Google VertexAI. You can switch between different models or add new ones:
+
+Model Selection: Choose the appropriate LLM based on the nature of the task (e.g., language translation, summarization).
+Adding New Models: Integrate additional LLMs by implementing their interfaces and adding them to Saiku's configuration.
+Example: Integrating a New LLM
+
+```javascript
+import CustomLLM from 'path/to/customLLM';
+import Agent from 'saiku/agents/agent';
+
+const agent = new Agent();
+agent.setModel(new CustomLLM(/* Custom LLM configuration */));
+```
+
+#### Creating and Modifying Actions
+Actions are individual modules that perform specific tasks. You can create new actions or modify existing ones to extend Saiku's capabilities:
+
+- New Actions: Develop actions for new functionalities specific to your application.
+- Modifying Actions: Enhance or alter existing actions to better align with your project goals.
+
+Example: Adding a Custom Action
+```javascript
+import { Action } from 'saiku/interfaces/action';
+import Agent from 'saiku/agents/agent';
+
+class CustomAction implements Action {
+  // Define action properties and methods
+  ...
+}
+
+const agent = new Agent();
+agent.addAction('customAction', new CustomAction());
+```
+
+<Note>
+  Thoroughly test any customizations to ensure they integrate seamlessly with Saiku and perform as expected in your application.
+</Note>
+Customizing Saiku allows you to leverage its powerful framework while tailoring it to the specific needs of your project. Explore the various customization options to make Saiku work for you.
+
+<Footer />

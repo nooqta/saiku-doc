@@ -1,4 +1,85 @@
 ---
 title: 'External Apis'
-description: ''
+description: 'Learn how to connect and interact with external APIs using Saiku, enhancing its functionalities and scope.'
 ---
+# Integrating External APIs with Saiku
+
+Saiku's flexible architecture allows for the integration of a wide range of external APIs, extending its capabilities beyond its core functionalities. This guide provides an overview of how to integrate and interact with external APIs within the Saiku framework.
+
+## Overview of External API Integration
+
+Integrating external APIs can significantly broaden the functionalities of Saiku, allowing it to interact with various services and platforms.
+
+### Key Considerations:
+
+- **Authentication**: Understand the authentication mechanism required by the external API (e.g., API keys, OAuth tokens).
+- **Request Format**: Familiarize yourself with the request structure expected by the API.
+- **Response Handling**: Prepare to handle and parse the responses from the API.
+
+## Steps for Integration
+
+Integrate external APIs into your Saiku project with the following steps:
+
+<Steps>
+  <Step title="Identify the API">
+    Research and select the external API that suits your requirements. Ensure it provides the necessary endpoints and data you need.
+  </Step>
+  <Step title="Obtain Credentials">
+    Register or sign up for the external API to obtain necessary credentials, such as API keys or client IDs.
+  </Step>
+  <Step title="Configure Environment">
+    Add the obtained credentials to your Saiku environment, typically via environment variables or configuration files.
+  </Step>
+  <Step title="Implement API Calls">
+    Develop the functionality in Saiku to call the external API. This might involve creating new actions or modifying existing ones.
+    - Use libraries like `axios` or `fetch` for HTTP requests.
+    - Ensure proper error handling and response parsing.
+  </Step>
+  <Step title="Test the Integration">
+    Thoroughly test the API integration to ensure it works as expected. Handle any edge cases or potential errors.
+  </Step>
+  <Step title="Document the Integration">
+    Maintain clear documentation of how the external API is integrated and used within Saiku, including any specific configurations or steps required.
+  </Step>
+</Steps>
+
+## Example: Integrating a Weather API
+
+Here's a brief example of how you might integrate a weather API with Saiku:
+
+<CodeGroup>
+
+```javascript As Dependency
+// Example of using Saiku as a dependency in your project
+import Agent from 'saiku/agents/agent';
+
+async function main() {
+  const agent = new Agent();
+  // The agent will automatically load all actions in the `actions` directory and shall decide which one to use based on the intent
+  const response = await agent.interact('What is the weather like today?');
+  console.log(response.text);
+}
+
+main();
+```
+```javascript As Standalone
+// Example of contributing to the Saiku project
+import Agent from './path/to/agent';
+import WeatherAction from './path/to/actions/weatherAction';
+
+async function enhanceAgent() {
+  const agent = new Agent();
+  const weatherAction = new WeatherAction();
+  agent.functions[weatherAction.name] = weatherAction;
+
+  // Test the new action
+  const response = await agent.run['weather'].run({ city: 'Paris' });
+  console.log('Weather in Paris:', response);
+}
+
+enhanceAgent();
+```
+</CodeGroup>
+<Note>
+  When integrating external APIs, always adhere to their usage policies and terms of service. Be mindful of rate limits and data usage restrictions.
+</Note>
