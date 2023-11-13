@@ -49,7 +49,7 @@
     },
     {
       "group": "User Guide",
-      "pages": ["user-guide/usage-instructions", "user-guide/terminal-usage", "user-guide/use-cases"]
+      "pages": ["user-guide/usage-instructions", "user-guide/cli-usage-instructions", "user-guide/use-cases"]
     },
     {
       "group": "API Reference",
