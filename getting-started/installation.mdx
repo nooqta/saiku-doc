@@ -1,0 +1,98 @@
+---
+title: 'Installation'
+description: 'Step-by-step instructions on how to install Saiku and set up your environment for optimal use.'
+---
+Understood! I'll revise the "Installation" page content for the Saiku documentation to correctly reference the Mintlify content components without the 'Mint' prefix.
+
+
+# Installation Guide for Saiku
+
+Setting up Saiku in your project is straightforward. This guide provides you with the necessary steps to install Saiku and prepare your environment for its optimal use.
+
+
+## Prerequisites
+
+Before installing Saiku, ensure you meet the following prerequisites:
+
+- Node.js installed on your system.
+- An OpenAI API key for GPT-4 integration.
+
+<List items={[
+  "Node.js (Latest Stable Version)",
+  "OpenAI API Key (For GPT-4 Integration)"
+]} />
+
+## Installation Steps
+
+### 1. Adding Saiku as a Dependency
+
+To add Saiku as a dependency in your project, run the following command in your project directory:
+
+```bash
+npm install saiku
+```
+
+<Callout type="tip">
+  <CalloutTitle>Tip for npm Users</CalloutTitle>
+  Make sure you're in the root directory of your project when running this command.
+</Callout>
+
+### 2. Environment Configuration
+
+Set up the necessary environment variables for Saiku. Start by copying the example environment file:
+
+```bash
+cp .env.example .env
+```
+
+Then, edit the `.env` file to include your specific details, such as the OpenAI API key and other required service credentials.
+
+### 3. Verifying Installation
+
+After installing Saiku, it's important to ensure it's functioning correctly. This section will guide you through a simple test to verify your installation.
+
+<Image
+  src="/images/verify-installation.svg"
+  alt="Verifying Saiku Installation"
+/>
+
+#### Setting Up a Test Script
+
+Create a file named `test-saiku.js` in your project directory and insert the following code:
+
+```javascript
+import Agent from 'saiku/agents/agent';
+
+async function testSaiku() {
+  const agent = new Agent();
+  const userQuery = "Hello Saiku";
+
+  const response = await agent.interact(userQuery);
+  console.log(response.text);
+}
+
+testSaiku();
+```
+
+#### Running the Test Script
+
+To run the test, use the following command in your terminal:
+
+```bash
+node test-saiku.js
+```
+
+When executed, this script will initialize a Saiku agent and process the query "Hello Saiku". It will then output Saiku's response to the console.
+
+<Callout type="success">
+  <CalloutTitle>Successful Test</CalloutTitle>
+  If you see a response from Saiku in your console, your installation is verified and functioning correctly.
+</Callout>
+
+---
+
+You're now ready to explore Saiku's capabilities and integrate it into your projects. For more detailed usage instructions, refer to our [User Guide](/user-guide/usage-instructions).
+
+<Footer />
+
+

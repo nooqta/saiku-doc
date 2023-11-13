@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Saiku",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
@@ -50,29 +50,53 @@
   ],
   "navigation": [
     {
-      "group": "Get Started",
-      "pages": ["introduction", "quickstart", "development"]
+      "group": "About Saiku",
+      "pages": ["about-saiku/overview", "about-saiku/why-saiku", "about-saiku/peas-framework"]
     },
     {
-      "group": "Essentials",
-      "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
+      "group": "Getting Started",
+      "pages": ["getting-started/introduciton", "getting-started/terminal", "getting-started/installation", "getting-started/configuration", "getting-started/quickstart-guide", "getting-started/environment-variables"]
     },
     {
-      "group": "API Documentation",
+      "group": "User Guide",
+      "pages": ["user-guide/usage-instructions", "user-guide/use-cases"]
+    },
+    {
+      "group": "API Reference",
       "pages": ["api-reference/introduction"]
     },
     {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
-      ]
+      "group": "Developer Guide",
+      "pages": ["developer-guide/development-setup", "developer-guide/contribution-guidelines", "developer-guide/building-and-testing", "developer-guide/codebase-architecture"]
+    },
+    {
+      "group": "Integration Guides",
+      "pages": ["integration-guides/google-services", "integration-guides/external-apis"]
+    },
+    {
+      "group": "Advanced Topics",
+      "pages": ["advanced-topics/modular-design", "advanced-topics/customization", "advanced-topics/future-roadmap"]
+    },
+    {
+      "group": "FAQs and Troubleshooting",
+      "pages": ["faqs-and-troubleshooting/faqs", "faqs-and-troubleshooting/troubleshooting"]
+    },
+    {
+      "group": "Community and Support",
+      "pages": ["community-and-support/contributing", "community-and-support/forums-and-channels", "community-and-support/feedback-and-issues"]
+    },
+    {
+      "group": "API Rate Limits and Costs",
+      "pages": ["api-rate-limits-and-costs/api-usage"]
+    },
+    {
+      "group": "License and Legal",
+      "pages": ["license-and-legal/licensing"]
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "twitter": "https://twitter.com/anis-marrouchi",
+    "github": "https://github.com/nooqta/saiku",
+    "linkedin": "https://www.linkedin.com/company/noqta"
   }
 }

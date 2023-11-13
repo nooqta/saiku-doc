@@ -1,0 +1,67 @@
+---
+title: 'Installing Saiku Globally'
+
+description: 'Learn how to use Saiku directly from your terminal for quick and efficient task automation.'
+
+---
+
+# Using Saiku as a Terminal Command
+
+Saiku can be used as a powerful tool directly from your terminal when installed globally. This allows for quick and efficient automation of tasks without the need for integrating it into a specific project. 
+
+<Image
+  src="/images/terminal-usage.svg"
+  alt="Using Saiku in Terminal"
+/>
+
+## Global Installation
+
+To use Saiku as a terminal command, you first need to install it globally. Run the following command:
+
+```bash
+npm install -g saiku
+```
+
+<Callout type="warning">
+  <CalloutTitle>Early Development Stage</CalloutTitle>
+  Note that Saiku is still in its early stages of development, and its architecture may undergo significant changes. Global installation is recommended for experimental use only.
+</Callout>
+
+## Using Saiku in the Terminal
+
+Once Saiku is installed globally, you can start using it directly in your terminal. Here’s how:
+
+1. **Open Your Terminal:** Access your command line interface.
+
+2. **Execute Saiku Commands:** You can now use Saiku to perform various tasks. For example:
+
+```bash
+saiku "What's the weather like today in New York?"
+```
+
+Saiku will process the command and return the results directly in your terminal.
+
+## Available Commands
+
+Saiku supports a variety of commands and functionalities. Here are some examples:
+
+- **Transcription:** `saiku "Transcribe this audio: audiofile.mp3"`
+- **Data Summarization:** `saiku "Summarize this text: 'Long text passage...'"`
+
+For a full list of commands and their usage, refer to our [API Reference](/api-reference/introduction).
+
+## Customizing Saiku's Terminal Behavior
+
+You can customize how Saiku behaves in your terminal. This includes setting various flags and options to tailor its responses to your needs.
+
+<CodeBlock>
+  saiku --help
+</CodeBlock>
+
+This command will display all the available options and flags you can use with Saiku in the terminal.
+
+---
+
+Using Saiku as a terminal command opens up a world of quick and efficient automation possibilities. Experiment with different commands and explore how Saiku can streamline your workflow.
+
+<Footer />

@@ -1,0 +1,49 @@
+├── home.mdx
+│
+├── about-saiku
+│   ├── overview.mdx
+│   ├── why-saiku.mdx
+│   └── peas-framework.mdx
+│
+├── getting-started
+│   ├── installation.mdx
+│   ├── configuration.mdx
+│   ├── quickstart-guide.mdx
+│   └── environment-variables.mdx
+│
+├── user-guide
+│   ├── usage-instructions.mdx
+│   └── use-cases.mdx
+│
+├── api-reference
+│   └── introduction.mdx
+│
+├── developer-guide
+│   ├── development-setup.mdx
+│   ├── contribution-guidelines.mdx
+│   ├── building-and-testing.mdx
+│   └── codebase-architecture.mdx
+│
+├── integration-guides
+│   ├── google-services.mdx
+│   └── external-apis.mdx
+│
+├── advanced-topics
+│   ├── modular-design.mdx
+│   ├── customization.mdx
+│   └── future-roadmap.mdx
+│
+├── faqs-and-troubleshooting
+│   ├── faqs.mdx
+│   └── troubleshooting.mdx
+│
+├── community-and-support
+│   ├── contributing.mdx
+│   ├── forums-and-channels.mdx
+│   └── feedback-and-issues.mdx
+│
+├── api-rate-limits-and-costs
+│   └── api-usage.mdx
+│
+└── license-and-legal
+    └── licensing.mdx
