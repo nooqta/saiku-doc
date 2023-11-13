@@ -38,6 +38,9 @@
       "url": "https://github.com/nooqta/saiku"
     }
   ],
+  "feedback": {
+    "thumbsRating": true
+  },
   "navigation": [
     {
       "group": "About Saiku",
