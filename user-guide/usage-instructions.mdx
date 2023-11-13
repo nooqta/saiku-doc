@@ -1,4 +1,57 @@
 ---
 title: 'Usage Instructions'
-description: ''
+description: 'Comprehensive guide on how to use Saiku for automating tasks and enhancing your projects.'
 ---
+
+# Usage Instructions for Saiku
+
+Saiku offers versatile capabilities for automating a wide range of tasks. Whether you're using it in a project or as a terminal command, understanding how to interact with Saiku is key to leveraging its full potential.
+
+## Using Saiku in Your Project
+
+Once you have Saiku installed and configured in your project, you can start using its features. Here's a basic example of how to use Saiku for a simple task.
+
+### Basic Example
+
+```javascript
+import Agent from 'saiku/agents/agent';
+
+// Initialize the agent with default options
+const agent = new Agent();
+
+// Example task: Summarizing text
+const task = "Summarize the following text: '...long text here...'";
+
+// Using the agent to perform the task
+agent.interact(task).then(response => {
+  console.log('Summary:', response.text);
+});
+```
+
+This script sends a text summarization task to Saiku and logs the response.
+
+## Using Saiku as a Terminal Command
+
+If you installed Saiku globally, you can use it directly from your terminal. This is ideal for quick tasks without needing to integrate into a project.
+
+### Terminal Command Example
+
+```bash
+saiku "What’s the weather forecast for today in London?"
+```
+
+This command will use Saiku to fetch the weather forecast and display the results in your terminal.
+
+<Tip>
+  Saiku is capable of handling a variety of tasks. Experiment with different queries and commands to explore its range of functionalities.
+</Tip>
+
+## Advanced Usage
+
+For more complex tasks and configurations, refer to our [Advanced Topics](/advanced-topics) section where you can find detailed guides on customizing and extending Saiku's capabilities.
+
+---
+
+Start experimenting with Saiku in your projects or directly in your terminal and discover the many ways it can streamline and enhance your workflow.
+
+<Footer />
