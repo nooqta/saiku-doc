@@ -1,4 +1,51 @@
 ---
 title: 'Environment Variables'
-description: ''
+description: 'Learn how to set and manage environment variables crucial for the optimal functioning of Saiku in your projects.'
 ---
+
+# Setting Up Environment Variables for Saiku
+
+Environment variables are essential for configuring Saiku to work effectively with various services and APIs. This guide will walk you through the process of setting up these variables.
+
+## Understanding Environment Variables
+
+Environment variables are used to store configuration settings outside of your application code. They help in managing sensitive data like API keys and project identifiers.
+
+## Common Environment Variables for Saiku
+
+- `OPENAI_API_KEY`: Your personal API key for OpenAI services.
+
+## Creating the Environment File
+
+1. **Create a `.env` File**: In your project's root directory, create a new file named `.env`.
+
+```bash
+touch .env
+```
+
+2. **Add Your Variables**: Open the `.env` file and insert your environment variables.
+
+```plaintext
+# Example .env file content
+OPENAI_API_KEY=your_openai_api_key
+```
+
+## Loading Environment Variables
+
+To make use of these variables in your Saiku project, load them at the start of your application.
+
+```javascript
+require('dotenv').config();
+
+console.log(process.env.OPENAI_API_KEY); // Use your variables
+```
+
+<Warning>
+  It's crucial to keep your `.env` file secure. Do not commit it to version control, as it often contains sensitive information like API keys.
+</Warning>
+
+---
+
+Properly setting up environment variables is key to ensuring that Saiku operates smoothly, particularly when interfacing with external services and APIs.
+
+<Footer />

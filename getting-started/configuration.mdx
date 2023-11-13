@@ -1,4 +1,61 @@
 ---
 title: 'Configuration'
-description: ''
+description: 'Essential steps to configure Saiku for optimal performance in your projects, focusing on setting up `AgentOptions`.'
 ---
+
+# Configuring Saiku
+
+Proper configuration of Saiku is crucial for leveraging its full potential in your projects. This guide focuses on setting up the `AgentOptions` to customize Saiku's behavior according to your requirements.
+
+
+## Setting Environment Variables
+
+Start by setting the necessary environment variables in your `.env` file, such as your `OPENAI_API_KEY` for OpenAI services integration.
+
+## Customizing AgentOptions
+
+Saiku's `AgentOptions` provide flexibility and control over how the AI agent operates in your environment. Here’s how you can configure these options:
+
+### Available Options
+
+- `actionsPath`: Path to custom action scripts.
+- `systemMessage`: System role prompt message (optional).
+- `allowCodeExecution`: Flag to enable/disable code execution (optional).
+- `interactive`: Enable interactive mode for user input (boolean or string).
+- `speech`: Configure speech functionality (`input`, `output`, `both`, `none`).
+- `llm`: Specify the language learning model (`openai`, `vertexai`, `huggingface`, `ollama`).
+- `[key: string]`: Additional custom properties for unique project requirements.
+
+### Example Configuration
+
+Here's an example of setting `AgentOptions` in your application:
+
+```javascript
+import Agent from 'saiku/agents/agent';
+
+const agentOptions = {
+  actionsPath: "../actions",
+  systemMessage: "Your custom system message here",
+  allowCodeExecution: true,
+  interactive: true,
+  speech: "none",
+  llm: "openai" // Default language learning model
+};
+
+const agent = new Agent(agentOptions);
+```
+
+## Testing Your Configuration
+
+After setting up your `AgentOptions`, it's important to test Saiku to ensure it functions as expected. Run a simple interaction test as described in our [Verifying Installation](/verifying-installation) guide.
+
+<Callout type="info">
+  <CalloutTitle>Explore Advanced Configurations</CalloutTitle>
+  Dive deeper into advanced configurations and usage scenarios in our [Advanced Topics](/advanced-topics) section.
+</Callout>
+
+---
+
+Customizing `AgentOptions` tailors Saiku's functionality to fit your project's specific needs, enhancing its effectiveness and efficiency.
+
+<Footer />
