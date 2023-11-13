@@ -1,0 +1,81 @@
+---
+
+title: CLI Usage
+
+Description: Comprehensive guide on using the Saiku CLI, detailing options, commands, and subcommands for effective task automation.
+
+---
+
+# Saiku Command-Line Interface (CLI) Usage
+
+The Saiku CLI is a powerful tool for automating tasks using Saiku's AI agent. This guide details the usage of the `saiku` command, including its options, subcommands, and their functionalities.
+
+## The `saiku` Command
+
+### Basic Usage
+
+```bash
+saiku [options] [command]
+```
+
+This is the primary command to interact with Saiku's AI agent. It supports various options and subcommands for different tasks.
+
+### Options
+
+- `-v, --version`: Outputs the current version of Saiku.
+- `-exec, --allowCodeExecution`: Executes the code without prompting the user.
+- `-s, --speech <type>`: Sets speech interaction mode. Possible values are `input`, `output`, `both`, `none`.
+- `-role, --systemMessage <role>`: Sets the model system role message.
+- `-i, --interactive <mode>`: Runs the agent in interactive mode. Default is `true`.
+- `-m, --llm <model>`: Specifies the language model to use, such as `openai` or `vertexai`.
+- `-h, --help`: Displays help for the command.
+
+### Subcommands
+
+1. **`action`**: Manages actions within Saiku.
+2. **`autopilot`**: Runs the AI agent in autopilot mode for automated task handling.
+3. **`serve`**: Initiates a chat interface with the Saiku agent in the browser.
+
+## The `saiku action` Subcommand
+
+### Usage
+
+```bash
+saiku action [options] [command]
+```
+
+Manages different actions in Saiku.
+
+### Options
+
+- `-m, --llm <model>`: Specifies the language model.
+- `-h, --help`: Displays help for the `action` subcommand.
+
+### Commands
+
+- `activate`: Activates a specific action.
+- `create`: Creates a new action.
+- `list`: Lists all available actions.
+- `run`: Runs a specific action with options.
+- `help`: Provides help for a specific `action` command.
+
+## The `saiku serve` Subcommand
+
+### Usage
+
+```bash
+saiku serve [options]
+```
+
+Launches a browser-based chat interface with the Saiku agent.
+
+### Options
+
+- `-m, --llm <model>`: Specifies the language model.
+- `-h, --help`: Displays help for the `serve` subcommand.
+
+---
+
+This CLI usage guide aims to provide a clear understanding of how to interact with Saiku through the command line, enhancing your ability to automate tasks efficiently.
+
+<Footer />
